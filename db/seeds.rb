@@ -17,8 +17,9 @@ stops = {
 route1 = Route.create!(route_id: "R1", agency: agency, route_short_name: "1", route_long_name: "Hauptbahnhof - Stadtpark", route_type: 3, route_color: "FF0000", route_text_color: "FFFFFF")
 route2 = Route.create!(route_id: "R2", agency: agency, route_short_name: "2", route_long_name: "Hauptbahnhof - Universität", route_type: 3, route_color: "0000FF", route_text_color: "FFFFFF")
 
-cal_weekday = Calendar.create!(service_id: "WD", monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: false, sunday: false, start_date: "20260101", end_date: "20261231")
-cal_weekend = Calendar.create!(service_id: "WE", monday: false, tuesday: false, wednesday: false, thursday: false, friday: false, saturday: true, sunday: true, start_date: "20260101", end_date: "20261231")
+# Not used for now
+# cal_weekday = Calendar.create!(service_id: "WD", monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: false, sunday: false, start_date: "20260101", end_date: "20261231")
+# cal_weekend = Calendar.create!(service_id: "WE", monday: false, tuesday: false, wednesday: false, thursday: false, friday: false, saturday: true, sunday: true, start_date: "20260101", end_date: "20261231")
 
 trip1 = Trip.create!(trip_id: "T1", route: route1, service_id: "WD", trip_headsign: "Stadtpark", direction_id: 0)
 trip2 = Trip.create!(trip_id: "T2", route: route1, service_id: "WE", trip_headsign: "Stadtpark", direction_id: 0)
