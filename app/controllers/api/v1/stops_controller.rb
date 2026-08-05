@@ -1,6 +1,6 @@
 module Api
   module V1
-    class StopsController < ApplicationController
+    class StopsController < BaseController
       def index
         render json: Stop.all.as_json(only: [ :stop_id, :stop_name, :stop_lat, :stop_lon ])
       end

@@ -1,6 +1,6 @@
 module Api
   module V1
-    class RoutesController < ApplicationController
+    class RoutesController < BaseController
       def index
         routes = Route.includes(:agency).all
         render json: routes.map { |route| route_json(route) }

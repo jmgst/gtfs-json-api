@@ -1,6 +1,6 @@
 module Api
   module V1
-    class AgenciesController < ApplicationController
+    class AgenciesController < BaseController
       def index
         render json: Agency.all.as_json(only: [ :agency_id, :agency_name, :agency_url, :agency_timezone ])
       end

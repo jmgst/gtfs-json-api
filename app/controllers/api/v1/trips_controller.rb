@@ -1,6 +1,6 @@
 module Api
   module V1
-    class TripsController < ApplicationController
+    class TripsController < BaseController
       def index
         trips = Trip.includes(:route).all
         render json: trips.map { |t| { trip_id: t.trip_id, trip_headsign: t.trip_headsign, route_short_name: t.route.route_short_name } }
