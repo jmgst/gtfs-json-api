@@ -2,7 +2,14 @@ module Api
   module V1
     class RoutesController < BaseController
       def index
-        routes = Route.includes(:agency).all
+        routes =
+          if params[:agency_id]
+            agency = Agency.find_by!(agency_id: params[:agency_id])
+            agency.routes.includes(:agency)
+          else
+            Route.includes(:agency)
+          end
+
         render json: routes.map { |route| route_json(route) }
       end
 

@@ -2,7 +2,14 @@ module Api
   module V1
     class TripsController < BaseController
       def index
-        trips = Trip.includes(:route).all
+        trips =
+          if params[:route_id]
+            route = Route.find_by!(route_id: params[:route_id])
+            route.trips.includes(:route)
+          else
+            Trip.includes(:route)
+          end
+
         render json: trips.map { |t| { trip_id: t.trip_id, trip_headsign: t.trip_headsign, route_short_name: t.route.route_short_name } }
       end
 
