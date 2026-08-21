@@ -1,23 +1,23 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  stop_id: MyString
+  stop_id: stop_1
   stop_code: MyString
   stop_name: MyString
   stop_desc: MyString
   stop_lat: 9.99
   stop_lon: 9.99
-  zone_id: MyString
+  zone_id: zone_1
   location_type: 1
   wheelchair_boarding: 1
 
 two:
-  stop_id: MyString
+  stop_id: stop_2
   stop_code: MyString
   stop_name: MyString
   stop_desc: MyString
   stop_lat: 9.99
   stop_lon: 9.99
-  zone_id: MyString
+  zone_id: zone_2
   location_type: 1
   wheelchair_boarding: 1
