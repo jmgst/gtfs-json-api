@@ -19,3 +19,9 @@ rails s
 * `http://localhost:3000/api/v1/stops/:id` zur Anzeige einer bestimmten Haltestelle (Angabe der stop_id)
 * `http://localhost:3000/api/v1/trips` zur Anzeige aller Fahrten
 * `http://localhost:3000/api/v1/trips/:id` zur Anzeige einer bestimmten Fahrt (Angabe der trip_id)
+
+### Verschachtelte Abfragen
+
+* `http://localhost:3000/api/v1/trips/:id` zur Anzeige alle Haltestellen einer Fahrt
+* `http://localhost:3000/api/v1/routes/:route_id/trips` zur Anzeige aller Fahrten einer Linie
+* `http://localhost:3000/api/v1/agencies/:agency_id/routes` zur Anzeige aller Linien eines Verkehrsunternehmens
